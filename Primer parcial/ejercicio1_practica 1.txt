@@ -1,0 +1,28 @@
+'''Calcular la hipotenusa de un triangulo
+'''
+
+repetir <- "si"
+cateto_ady <- -5
+cateto_opuesto <- -8
+while(repetir == "si" || repetir == 'Si' || repetir =="s" || repetir == "S"){
+  while(cateto_ady <= 0){
+    ('Ingresa el cateto adyacente')
+    cateto_ady <- readLines(n=1)
+    cateto_ady <- as.numeric(cateto_ady)
+    if(cateto_ady <=0){
+    print('La opcion ingresada no es valida, vuelva a intentarlo.')
+    }
+  }
+  while(cateto_opuesto <=0){
+    cat('Ingresa el cateto opuesto')
+    cateto_opuesto <- readLines(n=1)
+    cateto_opuesto <- as.numeric(cateto_opuesto)
+    if(cateto_opuesto <= 0){
+      print("la opcion ingresada no es valida, vuelva a intentarlo")
+    }
+  }
+  hipotenusa <- sqrt((cateto_ady**2) + (cateto_opuesto**2))
+  cat("La hipotenusa es: ", hipotenusa, "\n")
+  cat("¿Quieres volver a calcularla?")
+  repetir <- readLines(n=1)
+}

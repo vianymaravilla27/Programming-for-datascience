@@ -1,0 +1,462 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Examen},
+  pdfauthor={Salazar Vega Rodrigo},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Examen}
+\author{Salazar Vega Rodrigo}
+\date{14/12/2021}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#knitr::opts\_chunk$set(echo = TRUE)}
+\FunctionTok{library}\NormalTok{(nortest)}
+\FunctionTok{library}\NormalTok{(factoextra)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'factoextra' was built under R version 4.1.2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(polycor)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'polycor' was built under R version 4.1.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggcorrplot)}
+\FunctionTok{library}\NormalTok{(psych)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'psych' was built under R version 4.1.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'psych'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:polycor':
+## 
+##     polyserial
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:ggplot2':
+## 
+##     %+%, alpha
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{datos }\OtherTok{\textless{}{-}} \FunctionTok{read.table}\NormalTok{(}\FunctionTok{file.choose}\NormalTok{(), }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{datos }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(datos)}
+\NormalTok{datos\_esc }\OtherTok{\textless{}{-}} \FunctionTok{scale}\NormalTok{(datos)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{resolucion-de-examen.}{%
+\subsection{Resolucion de examen.}\label{resolucion-de-examen.}}
+
+Primero cargamos los datos al entorno de trabajo y lo transformamos a un
+data frame para poder trabajar más comodo don dichos datos, empezaremos
+con la prueba de hipotesis, ya que en esta podemos manipular los datos
+tal cual esta, en las demás pruebas es necesario escalar los datos, por
+eso empezaremos con esta, aplicaremos una prueba de normalidad.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"Exploracion de datos para ver si tiene una distribucion normal}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Exploracion de datos para ver si tiene una distribucion normal
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{print}\NormalTok{(}\StringTok{"Anderson{-}Darling normality test}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Anderson-Darling normality test\n"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{print}\NormalTok{(}\FunctionTok{ad.test}\NormalTok{(datos}\SpecialCharTok{$}\NormalTok{laufkont))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Anderson-Darling normality test
+## 
+## data:  datos$laufkont
+## A = 86.287, p-value < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{Como el p{-}value es menor a 0.5 podemos descartar que tenga una distribucion normal"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Como el p-value es menor a 0.5 podemos descartar que tenga una distribucion normal
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{print}\NormalTok{(}\FunctionTok{t.test}\NormalTok{(datos}\SpecialCharTok{$}\NormalTok{laufkont, }\AttributeTok{alternative =} \StringTok{"less"}\NormalTok{, }\AttributeTok{conf.level =} \FloatTok{0.95}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  One Sample t-test
+## 
+## data:  datos$laufkont
+## t = 64.798, df = 999, p-value = 1
+## alternative hypothesis: true mean is less than 0
+## 95 percent confidence interval:
+##      -Inf 2.642477
+## sample estimates:
+## mean of x 
+##     2.577
+\end{verbatim}
+
+\hypertarget{analisis-factorial.}{%
+\subsection{Analisis factorial.}\label{analisis-factorial.}}
+
+Como se habia mencionado anteriormente para trabajar esta técnica
+tenemos que tener los datos escalados, por lo se realiza eso y
+procedemos a realizar el análisis, utilizamos una funcion la que nos
+muestra cual es el número de factores optimos para trabajar con nuestro
+data set, el resultado son los siguientes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Obtenemos la matriz de correlacion policorica}
+\NormalTok{  mat\_cor }\OtherTok{\textless{}{-}} \FunctionTok{hetcor}\NormalTok{(datos\_esc)}\SpecialCharTok{$}\NormalTok{correlations }\CommentTok{\#matriz de correlacion policorica}
+  \FunctionTok{plot}\NormalTok{(}\FunctionTok{ggcorrplot}\NormalTok{(mat\_cor, }\AttributeTok{type=}\StringTok{"lower"}\NormalTok{, }\AttributeTok{hc.order =}\NormalTok{ T, }\AttributeTok{title =} \StringTok{"Grafica de correlaciones"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{exam_files/figure-latex/pressure2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \CommentTok{\# Verificamos que la matriz sea factoriazble}
+  \FunctionTok{cortest.bartlett}\NormalTok{(mat\_cor, }\AttributeTok{n =} \DecValTok{100}\NormalTok{)}\OtherTok{{-}\textgreater{}}\NormalTok{p\_esf}
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{Bartlett Test}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Bartlett Test
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{print}\NormalTok{(p\_esf}\SpecialCharTok{$}\NormalTok{p)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.02134718
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{cat}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}n}\StringTok{KMO}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## KMO
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{print}\NormalTok{(}\FunctionTok{KMO}\NormalTok{(mat\_cor))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Kaiser-Meyer-Olkin factor adequacy
+## Call: KMO(r = mat_cor)
+## Overall MSA =  0.6
+## MSA for each item = 
+## laufkont laufzeit    moral     verw    hoehe sparkont  beszeit     rate 
+##     0.65     0.57     0.58     0.53     0.54     0.63     0.70     0.32 
+##   famges   buerge wohnzeit     verm    alter weitkred     wohn bishkred 
+##     0.54     0.60     0.57     0.73     0.61     0.57     0.60     0.53 
+##    beruf     pers    telef  gastarb   kredit 
+##     0.66     0.61     0.70     0.66     0.66
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \CommentTok{\# Determinar el numero de factores}
+  \FunctionTok{plot}\NormalTok{(}\FunctionTok{scree}\NormalTok{(mat\_cor))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{exam_files/figure-latex/pressure2-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{plot}\NormalTok{(}\FunctionTok{fa.parallel}\NormalTok{(mat\_cor,}\AttributeTok{n.obs=}\DecValTok{200}\NormalTok{,}\AttributeTok{fa=}\StringTok{"fa"}\NormalTok{,}\AttributeTok{fm=}\StringTok{"minres"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{exam_files/figure-latex/pressure2-3.pdf}
+
+\begin{verbatim}
+## Parallel analysis suggests that the number of factors =  4  and the number of components =  NA
+\end{verbatim}
+
+\includegraphics{exam_files/figure-latex/pressure2-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \CommentTok{\#Rotacion}
+\NormalTok{  rot}\OtherTok{\textless{}{-}}\FunctionTok{c}\NormalTok{(}\StringTok{"varimax"}\NormalTok{)}
+  
+\NormalTok{  bi\_mod}\OtherTok{\textless{}{-}}\ControlFlowTok{function}\NormalTok{(tipo)\{}
+    \FunctionTok{biplot.psych}\NormalTok{(}\FunctionTok{fa}\NormalTok{(datos\_esc, }\AttributeTok{nfactors =} \DecValTok{4}\NormalTok{, }\AttributeTok{fm =} \StringTok{"minres"}\NormalTok{, }\AttributeTok{rotate =}\NormalTok{ tipo),}\AttributeTok{main =} \FunctionTok{paste}\NormalTok{(}\StringTok{"Biplot con rotación"}\NormalTok{,tipo),}\AttributeTok{col=}\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{),}\AttributeTok{pch =} \FunctionTok{c}\NormalTok{(}\DecValTok{21}\NormalTok{,}\DecValTok{18}\NormalTok{))  }
+\NormalTok{  \}}
+  \FunctionTok{sapply}\NormalTok{(rot,bi\_mod)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in fac(r = r, nfactors = nfactors, n.obs = n.obs, rotate = rotate, : An
+## ultra-Heywood case was detected. Examine the results carefully
+\end{verbatim}
+
+\includegraphics{exam_files/figure-latex/pressure2-5.pdf}
+
+\begin{verbatim}
+## $varimax
+## NULL
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \CommentTok{\# Interpretacion}
+\NormalTok{  modelo\_varimax}\OtherTok{\textless{}{-}}\FunctionTok{fa}\NormalTok{(mat\_cor,}\AttributeTok{nfactors =} \DecValTok{4}\NormalTok{,}\AttributeTok{rotate =} \StringTok{"varimax"}\NormalTok{,}
+                     \AttributeTok{fa=}\StringTok{"minres"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in fac(r = r, nfactors = nfactors, n.obs = n.obs, rotate = rotate, : An
+## ultra-Heywood case was detected. Examine the results carefully
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{fa.diagram}\NormalTok{(modelo\_varimax, }\AttributeTok{main =} \StringTok{"Gráfico AF"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{exam_files/figure-latex/pressure2-6.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \FunctionTok{print}\NormalTok{(modelo\_varimax}\SpecialCharTok{$}\NormalTok{loadings,}\AttributeTok{cut=}\DecValTok{0}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Loadings:
+##          MR1    MR2    MR3    MR4   
+## laufkont  0.080  0.057  0.567 -0.019
+## laufzeit  0.518  0.016 -0.211  0.316
+## moral    -0.082  0.345  0.363  0.022
+## verw      0.136 -0.026 -0.034  0.002
+## hoehe     0.528  0.033 -0.126  0.855
+## sparkont  0.108  0.089  0.265  0.032
+## beszeit   0.120  0.419  0.112 -0.089
+## rate      0.166  0.104 -0.044 -0.390
+## famges   -0.019  0.154  0.036 -0.017
+## buerge   -0.205 -0.012 -0.111  0.073
+## wohnzeit  0.090  0.327 -0.028 -0.046
+## verm      0.533  0.180 -0.179  0.016
+## alter     0.064  0.556  0.039 -0.040
+## weitkred -0.059 -0.073  0.207 -0.031
+## wohn      0.275  0.360 -0.088 -0.034
+## bishkred -0.059  0.375  0.134  0.069
+## beruf     0.521 -0.006  0.078  0.019
+## pers      0.129 -0.276  0.083 -0.097
+## telef     0.423  0.119  0.133  0.087
+## gastarb   0.279 -0.033 -0.024 -0.134
+## kredit   -0.139  0.120  0.571 -0.007
+## 
+##                  MR1   MR2   MR3   MR4
+## SS loadings    1.619 1.173 1.073 1.045
+## Proportion Var 0.077 0.056 0.051 0.050
+## Cumulative Var 0.077 0.133 0.184 0.234
+\end{verbatim}
+
+Obtenemos la matriz de correlaciones, asi como el grafico donde muestra
+el número de factores requeridos y la relación que tiene las variables
+con cada factor.
+
+\hypertarget{k-means}{%
+\subsection{k-means}\label{k-means}}
+
+Para trabajar con el k-means nos guiamos un poco con el analisis
+anterior, definimos 3 grupos para trabajar con este análisis y obtenemos
+el siguiente resultado.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#se aplica el algoritmo k{-}means}
+\NormalTok{  grupos }\OtherTok{\textless{}{-}} \FunctionTok{kmeans}\NormalTok{(datos\_esc, }\AttributeTok{centers =} \DecValTok{3}\NormalTok{, }\AttributeTok{nstart =} \DecValTok{25}\NormalTok{)}
+  
+  \CommentTok{\#Graficar los grupos}
+  \FunctionTok{plot}\NormalTok{(}\FunctionTok{fviz\_cluster}\NormalTok{(grupos, }\AttributeTok{data =}\NormalTok{ datos\_esc, }\AttributeTok{main =} \StringTok{"Clustering K medias"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{exam_files/figure-latex/pressure1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  relaciones }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{grupos\_km =}\NormalTok{ grupos}\SpecialCharTok{$}\NormalTok{cluster)}
+\end{Highlighting}
+\end{Shaded}
+
+
+\end{document}
